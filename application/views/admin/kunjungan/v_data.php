@@ -63,7 +63,7 @@
                                         </td>
                                         <td class="text-center">
                                             <a href="<?= base_url() . 'admin/kunjungan/edit/' . $row['id_berobat']; ?>" class="btn btn-warning btn-sm">edit</a>
-                                            <a href="<?= base_url() . 'admin/kunjungan/hapus/' . $row['id_berobat']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin Mau di Hapus.?');">hapus</a>
+                                            <a href="<?= base_url() . 'admin/kunjungan/hapus/' . $row['id_berobat']; ?>" class="btn btn-danger btn-sm">hapus</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

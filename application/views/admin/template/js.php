@@ -29,10 +29,8 @@
 <script src="<?= base_url('assets/plugins') ?>/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?= base_url('assets/template/backend/dist') ?>/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<!-- <script src="<?= base_url('assets/template/backend/dist') ?>/js/demo.js"></script> -->
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<!-- <script src="<?= base_url('assets/template/backend/dist') ?>/js/pages/dashboard.js"></script> -->
+<!-- sweetalert2 -->
+<script src="<?= base_url('assets/template/backend/dist') ?>/js/sweetalert2.all.min.js"></script>
 
 <!-- datatables -->
 <script src="<?= base_url('assets/plugins') ?>/datatables/jquery.dataTables.min.js"></script>
@@ -63,4 +61,24 @@
             "responsive": true,
         });
     });
+</script>
+
+<script>
+    $('.btn-danger').on('click', function(e) {
+        e.preventDefault();
+        const href = $(this).attr('href');
+        Swal.fire({
+            title: 'Yakin mau Di Hapus?',
+            text: 'Jika yakin tekan Hapus',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Hapus'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.location.href = href;
+            }
+        })
+    })
 </script>

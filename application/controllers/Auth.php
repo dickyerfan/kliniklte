@@ -21,11 +21,11 @@ class Auth extends CI_Controller
 
     public function login_aksi()
     {
-        $this->form_validation->set_rules('nama', 'Nama Panggilan', 'required', [
-            'required' => 'Nama harus di isi, Tidak boleh kosong'
+        $this->form_validation->set_rules('nama', 'Nama', 'required', [
+            'required' => '%s harus di isi, Tidak boleh kosong'
         ]);
         $this->form_validation->set_rules('password', 'Password', 'trim|required', [
-            'required' => 'Password harus di isi, Tidak boleh kosong'
+            'required' => '%s harus di isi, Tidak boleh kosong'
         ]);
 
         if ($this->form_validation->run() == false) {

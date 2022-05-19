@@ -18,16 +18,16 @@ class Password extends CI_Controller
         // $data['pekerjaan'] = $this->password->getAll();
         $data['user'] = $this->db->get_where('users', ['nama' => $this->session->userdata('nama')])->row_array();
 
-        $this->form_validation->set_rules('current_password', 'Current Password', 'required|trim', [
-            'required' => 'Harus di isi, Tidak boleh kosong'
+        $this->form_validation->set_rules('current_password', 'Password Sekarang', 'required|trim', [
+            'required' => '%s Harus di isi'
         ]);
-        $this->form_validation->set_rules('new_password1', 'New Password', 'required|trim|min_length[5]|matches[new_password2]', [
-            'required' => 'Harus di isi, Tidak boleh kosong',
+        $this->form_validation->set_rules('new_password1', 'Password Baru', 'required|trim|min_length[5]|matches[new_password2]', [
+            'required' => '%s Harus di isi',
             'matches' => 'Password Baru Harus Sama dengan Password Konfirmasi',
             'min_length' => 'Password Minimal 5 karakter!'
         ]);
-        $this->form_validation->set_rules('new_password2', ' Confirm New Password', 'required|trim|min_length[3]|matches[new_password1]', [
-            'required' => 'Harus di isi, Tidak boleh kosong',
+        $this->form_validation->set_rules('new_password2', ' Password Konfimasi', 'required|trim|min_length[3]|matches[new_password1]', [
+            'required' => '%s Harus di isi',
             'matches' => 'Password Konfirmasi Harus Sama dengan Password Baru'
         ]);
 

@@ -42,17 +42,17 @@
                         <!-- <?= $this->session->unset_userdata('message'); ?> -->
                         <form action="<?= base_url('password'); ?>" method="post">
                             <div class="form-group">
-                                <label for="current_password">Password Saat ini</label>
+                                <label for="current_password">Password Saat ini *</label>
                                 <input type="password" class="form-control" id="current_password" name="current_password">
                                 <?= form_error('current_password', '<div class="text-danger font-weight-bold">', '</div>'); ?>
                             </div>
                             <div class="form-group">
-                                <label for="new_password1">Password Baru</label>
+                                <label for="new_password1">Password Baru *</label>
                                 <input type="password" class="form-control" id="new_password1" name="new_password1">
                                 <?= form_error('new_password1', '<div class="text-danger font-weight-bold">', '</div>'); ?>
                             </div>
                             <div class="form-group">
-                                <label for="new_password2">Password Konfirmasi</label>
+                                <label for="new_password2">Password Konfirmasi *</label>
                                 <input type="password" class="form-control" id="new_password2" name="new_password2">
                                 <?= form_error('new_password2', '<div class="text-danger font-weight-bold">', '</div>'); ?>
                             </div>

@@ -57,7 +57,7 @@
                                         <td class="text-center"><?= $row['umur']; ?></td>
                                         <td class="text-center">
                                             <a href="<?= base_url() . 'admin/pasien/edit/' . $row['id_pasien']; ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
-                                            <a href="<?= base_url() . 'admin/pasien/hapus/' . $row['id_pasien']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin Mau di Hapus.?');"><i class="fas fa-trash"></i> Hapus</a>
+                                            <a href="<?= base_url() . 'admin/pasien/hapus/' . $row['id_pasien']; ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

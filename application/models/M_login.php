@@ -23,7 +23,7 @@ class M_login extends CI_Model
                     );
                     $this->session->set_userdata($sess);
                 }
-                $this->session->set_flashdata('info', '<div class="alert alert-success" role="alert" style="width: 25%;">Login Sukses, Selamat Bekerja.</div>');
+                $this->session->set_flashdata('info', '<div class="alert alert-success" role="alert" style="width: 50%;">Login Sukses, Selamat Bekerja.</div>');
                 if ($data['hak_akses'] == 'Administrator') {
                     redirect('admin/dashboard');
                 } else {

@@ -72,7 +72,7 @@
                                                 </select>
                                             </div>
                                             <div class="form-group mt-2">
-                                                <button type="submit" class="btn btn-danger btn-sm">Simpan</button>
+                                                <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
                                             </div>
                                         </form>
                                     </div>
